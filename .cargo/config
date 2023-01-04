@@ -1,0 +1,12 @@
+[build]
+# By default, build for ARM Cortex-M0 CPU.
+target = "thumbv6m-none-eabi"
+
+[target.thumbv6m-none-eabi]
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+  "-C", "link-arg=--nmagic",
+]
+
+
+
