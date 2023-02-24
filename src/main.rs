@@ -17,7 +17,7 @@ use embedded_graphics::{
     mono_font::{ascii::FONT_6X10, MonoTextStyleBuilder},
     pixelcolor::BinaryColor,
     prelude::*,
-    text::{Alignment, Baseline, Text},
+    text::{Baseline, Text},
 };
 use ssd1306::{prelude::*, I2CDisplayInterface, Ssd1306};
 //use ufmt::uWrite;
@@ -29,10 +29,10 @@ use panic_halt as _;
 type NucString = String<256>;
 
 // A type definition for the GPIO pin to be used for our LED
-type LEDPIN = hal::gpio::gpioa::PA5<hal::gpio::Output<hal::gpio::PushPull>>;
+type Ledpin = hal::gpio::gpioa::PA5<hal::gpio::Output<hal::gpio::PushPull>>;
 
 // Mutex protected structure for our shared GPIO pin
-static GPIO: Mutex<RefCell<Option<LEDPIN>>> = Mutex::new(RefCell::new(None));
+static GPIO: Mutex<RefCell<Option<Ledpin>>> = Mutex::new(RefCell::new(None));
 
 #[entry]
 fn main() -> ! {
@@ -109,7 +109,7 @@ unsafe fn SysTick() {
     cortex_m::asm::nop();
 
     // Our moved LED pin
-    static mut LED: Option<LEDPIN> = None;
+    static mut LED: Option<Ledpin> = None;
 
     // Exception handler state variable
     static mut STATE: u32 = 1;
