@@ -13,8 +13,10 @@ stm32f0xx-hal = {version = "0.18", features = ["rt", "stm32f091"]}
 nb = "1.0"
 # oled
 embedded-hal = "0.2"
-embedded-graphics = "0.7"
-ssd1306 = "0.7"
+# embedded-graphics = "0.7"
+# ssd1306 = "0.7"
+embedded-graphics = "0.8"
+ssd1306 = {git="https://github.com/jamwaffles/ssd1306.git", hash="7271f39f55920f2212506843d7703aefbc65ffcf"}
 
 ufmt = "0.2"
 heapless = {version = "0.7", features = ["ufmt-impl"]}
