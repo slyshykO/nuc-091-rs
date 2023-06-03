@@ -100,7 +100,7 @@ fn main() -> ! {
         cortex_m::asm::nop();
         nb::block!(timer.wait()).ok();
         s.clear();
-        display.clear();
+        display.clear(BinaryColor::Off).unwrap();
     }
 }
 
