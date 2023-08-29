@@ -285,9 +285,9 @@ dependencies = [
 
 [[package]]
 name = "quote"
-version = "1.0.32"
+version = "1.0.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "50f3b39ccfb720540debaa0164757101c08ecb8d326b15358ce76a62c7e85965"
+checksum = "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
 dependencies = [
  "proc-macro2",
 ]
@@ -348,9 +348,9 @@ dependencies = [
 
 [[package]]
 name = "ssd1306"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e1eaea5daefc39bfa675e4e75e484af7e54628ffe4fc5300e52bde5905f6b677"
+checksum = "5eff5d3218556bd92f998fce3f47dac6fc326bd416eae279d6e6e92d9b4d0d5d"
 dependencies = [
  "display-interface",
  "display-interface-i2c",
